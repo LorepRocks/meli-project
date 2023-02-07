@@ -1,7 +1,7 @@
 import { Item, Category, SearchData } from '../types';
 import { AUTHOR } from '../../../config/constants';
 
-const buildItem = (item: any) => {
+const buildItem = (item: any): Item => {
   return {
     id: item.id,
     title: item.title,
@@ -45,7 +45,7 @@ export const mapCategories = (data: any): Category[] => {
   return categories;
 };
 
-export const buildItemsObj = (data: any) => {
+export const buildItemsObj = (data: any): SearchData => {
   const categories = mapCategories(data.available_filters);
   const items = mapItems(data.results);
 
