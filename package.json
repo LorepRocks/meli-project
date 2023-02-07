@@ -2,6 +2,7 @@
   "name": "meli-challenge",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -17,6 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "server": "PORT=4000 BASE_API_URL=https://api.mercadolibre.com SEARCH_PATH=sites/MLA/search ts-node-dev ./server/server.ts",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

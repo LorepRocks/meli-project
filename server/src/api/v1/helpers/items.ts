@@ -61,7 +61,9 @@ export const buildItemsObj = (data: any) => {
 export const buildItemWithDesc = (item: any, description: any) => {
   return {
     author: AUTHOR,
-    ...buildItem(item),
-    description: description.plain_text,
+    item: {
+      ...buildItem(item),
+      description: description.plain_text,
+    },
   };
 };
