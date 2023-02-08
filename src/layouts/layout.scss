@@ -1,0 +1,17 @@
+@import '../styles/mixins.scss';
+@import '../styles/variables.scss';
+
+.container {
+  padding: 4rem 0;
+  word-break: break-all;
+  width: fit-content;
+  background: $background;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  @include respond-desktop {
+    justify-content: flex-start;
+    padding: 4rem 11rem;
+  }
+}

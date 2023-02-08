@@ -1,0 +1,14 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.breadCrumb {
+  width: 100%;
+  font-size: 14px;
+  color: $dark-grey;
+  font-size: 8px;
+  word-break: break-all;
+  width: fit-content;
+  @include respond-desktop {
+    font-size: 18px;
+  }
+}

@@ -2,10 +2,12 @@ import express from 'express';
 import morgan from 'morgan';
 import itemsRouter from './src/api/v1/routes';
 import apicache from 'apicache';
+import cors from 'cors';
 require('dotenv').config();
 
 const app = express();
 
+app.use(cors());
 let cache = apicache.middleware;
 app.set('port', process.env.PORT || 3000);
 app.use(express.json());

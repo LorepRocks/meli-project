@@ -1,0 +1,29 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 70vh;
+  @include respond-desktop {
+    width: 72vw;
+  }
+  & div {
+    border: 8px solid #888db9;
+    border-top: 8px $blue solid;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    animation: spin 2s linear infinite;
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

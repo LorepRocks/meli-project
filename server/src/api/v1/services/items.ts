@@ -6,7 +6,7 @@ export const getItemsService = async (req: Request, res: Response) => {
   const { q: query } = req.query;
 
   if (!query) {
-    res.status(HTTP_CODES.BAD_REQUEST).send({ msg: HTTP_MSG.MISSING_QUERY });
+    res.status(HTTP_CODES.BAD_REQUEST).send({ error: HTTP_MSG.MISSING_QUERY });
     return;
   }
 
@@ -14,7 +14,7 @@ export const getItemsService = async (req: Request, res: Response) => {
     const data = await getItems(query);
     res.status(HTTP_CODES.OK).send(data);
   } catch (err) {
-    res.status(HTTP_CODES.SERVER).send({ msg: HTTP_MSG.SERVER_ERROR });
+    res.status(HTTP_CODES.SERVER).send({ error: HTTP_MSG.SERVER_ERROR });
   }
 };
 
@@ -22,7 +22,7 @@ export const getItemByIdService = async (req: Request, res: Response) => {
   const { id: itemId } = req.params;
 
   if (!itemId) {
-    res.status(HTTP_CODES.BAD_REQUEST).send({ msg: HTTP_MSG.MISSING_QUERY });
+    res.status(HTTP_CODES.BAD_REQUEST).send({ error: HTTP_MSG.MISSING_QUERY });
     return;
   }
 
@@ -30,6 +30,6 @@ export const getItemByIdService = async (req: Request, res: Response) => {
     const data = await getItemById(itemId);
     res.status(HTTP_CODES.OK).send(data);
   } catch (err) {
-    res.status(HTTP_CODES.SERVER).send({ msg: HTTP_MSG.SERVER_ERROR });
+    res.status(HTTP_CODES.SERVER).send({ error: HTTP_MSG.SERVER_ERROR });
   }
 };
