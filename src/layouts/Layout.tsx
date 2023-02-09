@@ -1,13 +1,13 @@
 import React, { FC, ReactNode } from 'react';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 import './layout.scss';
 
 const Layout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <div>
+    <main>
       <Header />
       <div className="container">{children}</div>
-    </div>
+    </main>
   );
 };
 

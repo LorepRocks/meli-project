@@ -7,23 +7,23 @@ const SearchInput = () => {
   const navigate = useNavigate();
 
   const handleRedirect = () => {
-    navigate({
-      pathname: '/items',
-      search: createSearchParams({
-        search: query,
-      }).toString(),
-    });
+    if (query) {
+      navigate({
+        pathname: '/items',
+        search: createSearchParams({
+          search: query,
+        }).toString(),
+      });
+    }
   };
 
-  const handleKeyUp = (e) => {
+  const handleKeyUp = (e: any) => {
     if (e.keyCode === 13) {
-      console.log('enter', query);
       handleRedirect();
     }
   };
 
   const handleClick = () => {
-    console.log('__query to search', query);
     handleRedirect();
   };
 
@@ -34,9 +34,10 @@ const SearchInput = () => {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyUp={(e) => handleKeyUp(e)}
+        placeholder="Nunca dejes de buscar"
       />
       <button onClick={handleClick}>
-        <img id="search" src="./search.png" />
+        <img id="search" src="./search.png" alt="search icon" />
       </button>
     </>
   );

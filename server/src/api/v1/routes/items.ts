@@ -67,6 +67,8 @@ const itemsRouter = express.Router();
  *                             type: string
  *                           free_shipping:
  *                             type: boolean
+ *                           city:
+ *                             type: string
  *
  */
 itemsRouter.get('/items', getItemsService);
@@ -124,6 +126,8 @@ itemsRouter.get('/items', getItemsService);
  *                         type: string
  *                       free_shipping:
  *                         type: boolean
+ *                       city:
+ *                         type: string
  *                       sold_quantity:
  *                         type: number
  *                       description:

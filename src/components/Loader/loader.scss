@@ -1,17 +1,14 @@
-@import '../styles/variables.scss';
-@import '../styles/mixins.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .loader {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90vw;
-  height: 70vh;
-  @include respond-desktop {
-    width: 72vw;
-  }
+  width: 100%;
+  height: 85vh;
   & div {
-    border: 8px solid #888db9;
+    border: 8px solid #acaebc;
     border-top: 8px $blue solid;
     border-radius: 50%;
     height: 60px;

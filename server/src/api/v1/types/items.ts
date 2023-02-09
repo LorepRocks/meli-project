@@ -15,6 +15,7 @@ export type Item = {
   price: Price;
   picture: string;
   condition: string;
+  city: string;
   free_shipping: boolean;
   sold_quantity?: number;
   description?: string;

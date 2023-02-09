@@ -5,7 +5,7 @@
     "jest/globals": true
   },
   "extends": ["prettier"],
-  "plugins": ["prettier", "jest"],
+  "plugins": ["prettier", "jest", "testing-library"],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",

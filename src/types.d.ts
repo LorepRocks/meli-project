@@ -18,6 +18,7 @@ export type Item = {
   free_shipping: boolean;
   sold_quantity?: number;
   description?: string;
+  city: string;
 };
 export type Result = {
   author?: {
@@ -26,4 +27,5 @@ export type Result = {
   };
   categories?: Category[];
   items?: Item[];
+  item?: Item;
 };

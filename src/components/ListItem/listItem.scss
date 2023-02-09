@@ -1,0 +1,81 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.link {
+  text-decoration: none;
+  color: #000;
+  li {
+    max-width: 100%;
+    display: flex;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid $background;
+    margin: 0 0.5rem;
+    position: relative;
+    @include lg-desktop {
+      align-items: center;
+    }
+    & img {
+      width: 100px;
+      height: 100px;
+      @include lg-desktop {
+        width: 180px;
+        height: 180px;
+      }
+    }
+    & .card-details {
+      padding: 1rem;
+      & .shipping-icon {
+        width: 18px;
+        height: 18px;
+        @include lg-desktop {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      & div {
+        display: flex;
+        align-items: center;
+        @include lg-desktop {
+          margin-left: 1rem;
+        }
+        & span {
+          margin-right: 0.5rem;
+          font-size: 12px;
+          @include lg-desktop {
+            font-size: 22px;
+          }
+        }
+      }
+      & .title {
+        text-decoration: none;
+        color: #000;
+        text-align: justify;
+        margin-top: 0.5rem;
+        display: inline-block;
+        font-size: 12px;
+        @include lg-desktop {
+          font-size: 18px;
+          margin-left: 1rem;
+        }
+      }
+    }
+    & .card-info {
+      display: inline-block;
+      position: absolute;
+      bottom: 2rem;
+      right: 1rem;
+      @include lg-desktop {
+        position: static;
+        display: block;
+        width: 20%;
+        margin: 0 auto;
+      }
+      & span {
+        font-size: 10px;
+        @include lg-desktop {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

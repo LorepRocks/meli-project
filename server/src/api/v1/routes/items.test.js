@@ -16,7 +16,7 @@ describe('Request for Items', () => {
   test('GET /items 400', async () => {
     const response = await request(app).get('/api/v1/items');
     expect(response.status).toBe(400);
-    expect(response.text).toEqual(JSON.stringify({ msg: 'Missing query parameter in request' }));
+    expect(response.text).toEqual(JSON.stringify({ error: 'Missing query parameter in request' }));
   });
 
   test('GET /items/:id 200', async () => {

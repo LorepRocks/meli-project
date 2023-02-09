@@ -1,4 +1,4 @@
-@import '../styles/mixins.scss';
+@import '../../styles/mixins.scss';
 
 .error {
   width: 90vw;
@@ -11,14 +11,14 @@
   font-weight: bold;
   color: #b2afaf;
   padding: 2rem 0;
-  @include respond-desktop {
+  @include lg-desktop {
     width: 72vw;
     font-size: 26px;
   }
   & span {
     margin: 1rem 0;
     font-size: 26px;
-    @include respond-desktop {
+    @include lg-desktop {
       font-size: 45px;
     }
   }

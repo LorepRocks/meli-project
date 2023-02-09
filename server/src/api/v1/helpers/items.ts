@@ -14,6 +14,7 @@ const buildItem = (item: any): Item => {
     condition: item.condition,
     free_shipping: item.shipping.free_shipping,
     sold_quantity: item.sold_quantity,
+    city: item.seller_address.city.name,
   };
 };
 

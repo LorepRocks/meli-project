@@ -1,0 +1,12 @@
+@import '../../styles/mixins.scss';
+
+.resultsContainer {
+  background-color: #fff;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  border-radius: 2px;
+  @include lg-desktop {
+    width: 100%;
+  }
+}

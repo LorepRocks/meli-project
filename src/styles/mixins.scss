@@ -1,4 +1,4 @@
-@mixin respond-desktop {
+@mixin lg-desktop {
   @media (min-width: 576px) {
     @content;
   }

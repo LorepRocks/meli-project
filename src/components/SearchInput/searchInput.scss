@@ -1,4 +1,4 @@
-@import '../styles/mixins.scss';
+@import '../../styles/mixins.scss';
 
 input {
   height: 2.5rem;
@@ -9,7 +9,7 @@ input {
   border-radius: 0;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   padding: 0 1rem;
-  @include respond-desktop {
+  @include lg-desktop {
     width: 65%;
     font-size: 20px;
   }
